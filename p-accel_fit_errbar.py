@@ -1,10 +1,11 @@
-#Created by lailavc based on 
+#Based on 
 
 import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from numpy.linalg import eig, inv
+from argparse import ArgumentParser
 
 mpl.rcParams['font.family'] = 'monospace'
 mpl.rcParams['axes.linewidth'] = 1.8
@@ -17,7 +18,11 @@ BIGGER_SIZE = 20
 
 #Definition of the imput parameters
 
-tab = pd.read_csv('NGC6440H_data_accelsearch.txt', header = None, delimiter = " ")
+parser = ArgumentParser(prog='Fit circular orbit', description='Input file')
+parser.add_argument('-f', '--filename', default="", type=str, help="Name of the file with periods and accelerations")
+args = parser.parse_args()
+
+tab = pd.read_csv(args.filename, header = None, delimiter = " ")
 c = 2.99792458e8
 
 Obs = tab[0]
