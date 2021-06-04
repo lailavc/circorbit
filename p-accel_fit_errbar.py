@@ -12,7 +12,7 @@ mpl.rcParams['ytick.major.width']=1.3
 SMALL_SIZE = 14
 MEDIUM_SIZE = 17
 BIGGER_SIZE = 20
-
+#HOLA
 #Definition of the imput parameters
 
 tab = pd.read_csv('NGC6440H_data_accelsearch.txt', header = None, delimiter = " ")
