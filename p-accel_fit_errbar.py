@@ -118,8 +118,8 @@ centre = list(centre)
 #Fitting the ellipse and errors
 
 def ellipse(centre, a0, b0) :
-    x = np.real(centre[0] + a0*np.cos(R)*np.cos(phi) - b0*np.sin(R)*np.sin(phi))
-    y = np.real(centre[1] + a0*np.cos(R)*np.sin(phi) + b0*np.sin(R)*np.cos(phi))
+    x = np.real(centre[0] + a0 * np.cos(R) * np.cos(phi) - b0 * np.sin(R) * np.sin(phi))
+    y = np.real(centre[1] + a0 * np.cos(R) * np.sin(phi) + b0 * np.sin(R) * np.cos(phi))
     return x, y
 
 xx, yy = ellipse(centre, a0, b0)
