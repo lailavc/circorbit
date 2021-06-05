@@ -137,7 +137,7 @@ xxmin = xxmin * 1 / scale
 
 print("centre = ",  centre)
 print("angle of rotation = ",  phi)
-print("axes = ", a0*1/scale,b0) 
+print("axes = ", a0 * 1 / scale,b0) 
 
 centre[0] = centre[0] * 1 / scale 
 
@@ -145,7 +145,7 @@ x0 = centre[0] + 2.8484
 a0 = a0 * 1 / scale
 
 pb = ((a0 * 1e-3) * 2 * np.pi * c) / ((x0 * 1e-3) * b0)
-a1 = ((a0 * 1e-3)/(x0 * 1e-3))**2 * (c/b0)
+a1 = ((a0 * 1e-3) / (x0 * 1e-3))**2 * (c/b0)
 
 print("The orbital period is", pb / 60 / 60 / 24)
 print("The projected semi-major axis", a1)
